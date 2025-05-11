@@ -5,7 +5,7 @@
 • Store into persistent Chroma vector database.
 """
 
-import os, uuid
+import os
 import feedparser, httpx
 from dotenv import load_dotenv
 
@@ -21,8 +21,8 @@ load_dotenv()  # Reads from .env file
 RSS_FEED         = os.getenv("RSS_FEED")
 COLLECTION_NAME  = os.getenv("CHROMA_COLLECTION")
 JINAAI_API_KEY   = os.getenv("JINAAI_API_KEY")
-MODEL_NAME       = os.getenv("JINAAI_MODEL")
-CHROMA_DIR       = os.getenv("CHROMA_DIR", "./chroma_db")  # Optional fallback
+MODEL_NAME       = os.getenv("JINAAI_MODEL") # jina-embeddings-v3
+CHROMA_DIR       = os.getenv("CHROMA_DIR", "./chroma_db")  
 
 # Basic user-agent for RSS feed requests
 USER_AGENT = "Mozilla/5.0 (rss-ingest script)"
