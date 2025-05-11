@@ -1,0 +1,62 @@
+# ─────────────────────────────────────────────────────────────
+#  Global
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+.env*               # ALL env/secret files
+
+# ─────────────────────────────────────────────────────────────
+#  Python / Backend
+# ─────────────────────────────────────────────────────────────
+# virtual-envs
+venv/
+env/
+.venv/
+.env
+
+# compiled byte-code
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+
+# local tools/output
+.mypy_cache/
+pytest_cache/
+coverage.xml
+htmlcov/
+
+# Chroma vector store (local persistence)
+chroma_db/
+
+# Jupyter or notebooks (if any)
+.ipynb_checkpoints/
+
+# ─────────────────────────────────────────────────────────────
+#  Node / Frontend
+# ─────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/.npm/
+frontend/.cache/
+frontend/dist/
+frontend/build/
+
+# dotenv for frontend as well (if any)
+frontend/.env*
+
+# ─────────────────────────────────────────────────────────────
+#  IDE / Editor junk
+# ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ─────────────────────────────────────────────────────────────
+#  Mac / Windows OS noise
+# ─────────────────────────────────────────────────────────────
+.Spotlight-V100
+.Trashes
+ehthumbs.db
