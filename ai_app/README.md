@@ -4,7 +4,7 @@ This script fetches recent news articles from an RSS feed, generates embeddings 
 
 ---
 
-## 🔧 Environment Setup
+## Environment Setup
 
 We have a `.env` file with the following:
 
