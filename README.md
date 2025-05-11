@@ -108,7 +108,6 @@ python ai_app.py
 
 ## Frontend
 ![frontend](./images/ChatBot.png)
-![frontend_flow](./images/frontend.mp4)
 
 
 ## backend
@@ -165,5 +164,4 @@ python ai_app.py
 #### 5. Drawbacks
 - Dockerization: Containerize backend + Chroma + Redis for easier deploy.
 - Multi-source ingestion: Allow ingesting from multiple feeds (e.g., Reuters, BBC, etc).
-- 
 
