@@ -42,17 +42,23 @@ export default function App() {
     setInput("");
 
     // Stream assistant's response incrementally
-    let partial = "";
-    for await (const chunk of sendMessage(sessionId, input)) {
-      partial = chunk;
+    let assistantIndex = null;
 
+    for await (const chunk of sendMessage(sessionId, input)) {
       setMessages((msgs) => {
-        // Remove any existing assistant message (so we only show 1 updating bubble)
-        const withoutAssistant = msgs.filter((m) => m.role !== "assistant");
-        // Add new assistant message with current partial content
-        return [...withoutAssistant, { role: "assistant", content: partial }];
+        // If assistant response hasn't been added yet
+        if (assistantIndex === null) {
+          assistantIndex = msgs.length;
+          return [...msgs, { role: "assistant", content: chunk }];
+        }
+    
+        // Update the last assistant message
+        const updated = [...msgs];
+        updated[assistantIndex] = { ...updated[assistantIndex], content: chunk };
+        return updated;
       });
     }
+    
   }
 
   // Reset the chat session (clears messages from server & local state)
