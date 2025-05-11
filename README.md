@@ -164,4 +164,11 @@ python ai_app.py
 #### 5. Drawbacks
 - Dockerization: Containerize backend + Chroma + Redis for easier deploy.
 - Multi-source ingestion: Allow ingesting from multiple feeds (e.g., Reuters, BBC, etc).
+- The project currently runs locally. It has not been deployed on cloud platforms like Render, Vercel, or EC2.
+- Although initial attempts were made to integrate Tailwind, it was removed due to issues with setup conflicts and build errors. Tailwind could still enhance maintainability and responsiveness if properly configured.
+- Backend errors are not displayed/handled clearly to the user in the frontend. Adding toast notifications or inline error messages would improve UX.
+
+#### 5. links
+- GEMINI API Key: https://aistudio.google.com/apikey
+- JINA.AI API KEY: https://jina.ai/api-dashboard/key-manager
 
